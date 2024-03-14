@@ -1,22 +1,29 @@
-import React from 'react'
-import './component-style.css';
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+    const items = useSelector((state) => state.cart);
     return (
-        <header className="header">
-            <nav className="navbar">
-                <a href="#home">home</a>
-                <a href="#about">about</a>
-                <a href="#menu">menu</a>
-                <a href="#products">products</a>
-                <a href="#review">review</a>
-                <a href="#contact">contact</a>
-                <a href="#blogs">blogs</a>
-            </nav>
-        </header>
+        <div
+            style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            }}
+        >
+            <span className="logo">REDUX STORE</span>
+            <div>
+                <Link className="navLink" to="/">
+                    Home
+                </Link>
+                <Link className="navLink" to="/cart">
+                    Cart
+                </Link>
+                <span className="cartCount">Cart items: {items.length}</span>
+            </div>
+        </div>
     );
 };
 
-
-export default Navbar
+export default Navbar;

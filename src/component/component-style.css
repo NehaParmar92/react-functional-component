@@ -61,7 +61,6 @@ html {
     justify-content: space-between;
     padding: 8px 7%;
     border-bottom: 0.2rem solid #ffc107;
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -117,6 +116,7 @@ html {
     border: 0;
     width: 100%;
     height: auto;
+    max-height: 100px;
   }
   
   .blogs .box-container .box:hover .image img {

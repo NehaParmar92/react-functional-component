@@ -9,12 +9,13 @@ const Blog = (props) => {
 
     const updateData = async () => {
         // const url = `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=d859ef457c554d7d84c47c607a4fd54d&page=10&pageSize=1`;
-        const url = `https://api.slingacademy.com/v1/sample-data/blog-posts?page=${page}&pageSize=10`;
+        // const url = `https://api.slingacademy.com/v1/sample-data/blog-posts&page=${page}&pageSize=10`;
+        const url =`https://api.slingacademy.com/v1/sample-data/blog-posts?offset=${page}&limit=30`
 
         let data = await fetch(url);
         let parseData = await data.json();
         console.log("parseData",parseData)
-        setBlog(parseData.blogs); // Update to parseData.blogs
+        setBlog(parseData.blogs); 
     }
 
     useEffect(() => {
