@@ -8,6 +8,8 @@ import Navbar from './component/Navbar';
 import Blog from './component/Blog';
 import { useEffect, useState } from 'react';
 import { getCart, storeCart } from './helpers';
+import Navigation from './component/Navigation';
+import Products from './component/Products';
 const App = () => {
     const [cart, setCart] = useState({});
     // Fetch cart from local storage
@@ -30,10 +32,12 @@ const App = () => {
         <div className="App">
             <Provider store={store}>
                 <Router>
-                    <Navbar />
+                    <Navigation />
                     <Routes>
                         <Route path="/" element={<Home />}></Route>
                         <Route path="/cart" element={<Cart />}></Route>
+                        <Route path="/products" element={<Products />}></Route>
+
                         <Route exact element={<Blog />} path="/blogs"></Route>
                     </Routes>
                 </Router>

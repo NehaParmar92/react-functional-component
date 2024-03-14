@@ -29,7 +29,7 @@ html {
   
   .heading {
     text-align: center;
-    color: #fff;
+    color: #191919;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
@@ -154,5 +154,122 @@ html {
     color: #ccc;
     padding: 1rem 0;
   }
+  .navbar {
+    background-color: #333; 
+    color: white;
+    padding: 1rem 0; 
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin-right: 1rem; 
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white; 
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffc107;
+  }
+  
+  .cartStyle {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .cartStyle span {
+    background-color: red;
+    color: #333;
+    border-radius: 50%;
+    padding: 0.1rem 0.1rem;
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    font-size: 14px;
+  }
+  .height-auto{
+      height: auto;
+  }
+  .cartWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .cartCard {
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    margin: 0.5rem; 
+  }
+  
+  .cartCard img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem; 
+    padding-right: 30px;
+max-height: 100px;
+  }
+  
+  .cartCard h5 {
+    margin: 0;
+    padding-right: 30px;
+  }
+  
+  .btn {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; 
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button1 {
+    background-color: #007bff;
+    color: white; 
+  }
+  
+  .button2 {
+    background-color: #007bff;
+    color: white; 
+  }
+  
+  .button:hover {
+    opacity: 0.8; 
+  }
+  
   
   
